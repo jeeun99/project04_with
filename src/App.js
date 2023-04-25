@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./css/App.css";
+
+import Header from "./pages/Header";
+import Footer from "./css/Footer";
+import Banner from "./pages/Banner";
+import Search from "./pages/Search";
+import Main from "./pages/Main";
+import Modal from "./pages/Modal";
+import Write from "./pages/Write";
+
+import { Route, Routes, useLocation } from "react-router-dom";
 
 function App() {
+  let urlName = useLocation().pathname;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Banner urlName={urlName} />
+      <Search urlName={urlName} />
+      <Routes>
+        <Route path="/project04_with/" element={<Main />} />
+        <Route path="/project04_with/detail/:id" element={<Modal />} />
+        <Route path="/project04_with/write" element={<Write />} />
+      </Routes>
+
+      <Footer />
     </div>
   );
 }
