@@ -153,6 +153,7 @@ function Main() {
       console.log("필터", filterData);
     });
   }, [input, x, y]);
+
   console.log(filterData);
   datas = Array.from(new Set(filterData));
   console.log("datas", datas);
@@ -242,6 +243,7 @@ function Main() {
             return <ListCard item={item} key={item.id} />;
           })}
         </ul>
+        <button>더보기</button>
       </section>
     </>
   );
