@@ -141,11 +141,8 @@ button {
 }
 .Search .textWrite {
   padding-bottom: 0;
-  display: none;
 }
-.Search .textWrite.off {
-  display: block;
-}
+
 .Search .searchInput {
   text-align: center;
   background-color: var(--c_fawhite);
@@ -185,6 +182,7 @@ button {
   border-radius: 1rem;
   margin-right: 1.125rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  margin-top: 1rem;
 }
 .list:nth-of-type(3n) {
   margin-right: 0;
@@ -414,6 +412,10 @@ button {
 .mainSec .btns .btnMain:hover {
   background-color: var(--c_green);
   color: var(--c_white);
+}
+/* mainPage 하위 카드 위치 지정 */
+.forCards {
+  padding-top: 3rem;
 }
 /* footer */
 .ft {

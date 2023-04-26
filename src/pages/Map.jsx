@@ -3,16 +3,41 @@ import { useSelector } from "react-redux";
 
 const { kakao } = window;
 
-function Map() {
+function Map({ add }) {
   let [x, setX] = useState(Number);
   let [y, setY] = useState(Number);
-
+  if (typeof add === "object") {
+    console.log("object");
+    add = add[0];
+    console.log("add obj", add);
+  } else if (typeof add === "string") {
+    console.log("string이다");
+  }
+  let input = add;
   let data = useSelector((state) => state.data);
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      doSomething(position.coords.latitude, position.coords.longitude);
-    });
+    setTimeout(() => {
+      if (input === "") {
+        console.log("input이 비어있을때");
+        navigator.geolocation.getCurrentPosition((position) => {
+          doSomething(position.coords.latitude, position.coords.longitude);
+        });
+      } else {
+        console.log("input이 비어있을때의 else");
+        let geocoder = new kakao.maps.services.Geocoder();
+        geocoder.addressSearch(input, function (result, status) {
+          console.log(
+            "input이 비어있을때의 else addSearch 실행되나 + status",
+            status
+          );
+          if (status === kakao.maps.services.Status.OK) {
+            console.log(result[0].y, result[0].x);
+            doSomething(result[0].y, result[0].x);
+          }
+        });
+      }
+    }, 500);
     const doSomething = (x, y) => {
       setX(x);
       setY(y);
@@ -21,6 +46,7 @@ function Map() {
     const options = {
       center: new kakao.maps.LatLng(x, y),
       level: 3,
+      disableZoom: true,
     };
     const map = new kakao.maps.Map(container, options);
 
@@ -48,7 +74,6 @@ function Map() {
     function showMarkers() {
       setMarkers(map);
     }
-
     function showTextMarkers() {
       for (let i = 0; i < markers.length; i++) {
         let marker = new kakao.maps.Marker({
@@ -81,7 +106,7 @@ function Map() {
         };
       }
     }
-  }, [x]);
+  }, [input, x, y]);
 
   return <div id="Map"></div>;
 }

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function Banner({ urlName }) {
-  let writeOff = urlName === "/write" ? "off" : "";
+  let writeOff = urlName === "/project04_with/write" ? "off" : "";
   return (
     <div className={`Banner ${writeOff}`}>
       <div className="banCon">
