@@ -518,7 +518,7 @@ let data = [
     title: "엠제이굿모닝빌딩",
     hours: "10:00 ~ 22:00",
     Img: "/img/BD_16.jpg",
-    address: "",
+    address: "대전광역시 서구 대덕대로 179",
     addX: 36.3494073871071,
     addY: 127.376831494806,
     toilet: 1,

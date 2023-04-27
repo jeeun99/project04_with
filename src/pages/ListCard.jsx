@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function ListCard({ item }) {
   return (
     <li className="list">
@@ -27,6 +28,7 @@ function ListCard({ item }) {
           </div>
         </div>
       </div>
+      <Link to={`/project04_with/detail/${item.id}`}></Link>
     </li>
   );
 }

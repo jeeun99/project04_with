@@ -168,12 +168,16 @@ button {
 .Search .searchInput input::placeholder {
   color: var(--c_grey);
 }
+.searchInput button:hover i {
+  color: var(--c_green);
+}
 /* list */
 .listCon {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
 }
+
 .list {
   display: flex;
   justify-content: space-between;
@@ -183,7 +187,16 @@ button {
   margin-right: 1.125rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   margin-top: 1rem;
+  position: relative;
 }
+.list > a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 .list:nth-of-type(3n) {
   margin-right: 0;
 }
@@ -220,6 +233,26 @@ button {
   height: 100%;
   object-fit: cover;
 }
+.forCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.seeMoreBtn {
+  margin-top: 1rem;
+  text-align: center;
+  padding: 0.75rem 2rem;
+  border: 2px solid var(--c_green);
+  background-color: var(--c_green);
+  color: var(--c_white);
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+.seeMoreBtn:hover {
+  color: var(--c_black);
+  background-color: transparent;
+}
+
 /* writePage */
 .writeSec {
   padding-top: 3rem;
