@@ -7,11 +7,11 @@ function Map({ add }) {
   let [x, setX] = useState(Number);
   let [y, setY] = useState(Number);
   if (typeof add === "object") {
-    console.log("object");
+    // console.log("object");
     add = add[0];
-    console.log("add obj", add);
+    // console.log("add obj", add);
   } else if (typeof add === "string") {
-    console.log("string이다");
+    // console.log("string이다");
   }
   let input = add;
   let data = useSelector((state) => state.data);
@@ -19,20 +19,20 @@ function Map({ add }) {
   useEffect(() => {
     setTimeout(() => {
       if (input === "") {
-        console.log("input이 비어있을때");
+        // console.log("input이 비어있을때");
         navigator.geolocation.getCurrentPosition((position) => {
           doSomething(position.coords.latitude, position.coords.longitude);
         });
       } else {
-        console.log("input이 비어있을때의 else");
+        // console.log("input이 비어있을때의 else");
         let geocoder = new kakao.maps.services.Geocoder();
         geocoder.addressSearch(input, function (result, status) {
-          console.log(
+          // console.log(
             "input이 비어있을때의 else addSearch 실행되나 + status",
             status
           );
           if (status === kakao.maps.services.Status.OK) {
-            console.log(result[0].y, result[0].x);
+            // console.log(result[0].y, result[0].x);
             doSomething(result[0].y, result[0].x);
           }
         });

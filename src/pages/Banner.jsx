@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 
-function Banner({ urlName }) {
-  let writeOff = urlName === "/project04_with/write" ? "off" : "";
+function Banner() {
   return (
-    <div className={`Banner ${writeOff}`}>
+    <div className={`Banner`}>
       <div className="banCon">
         <div className="bImg">
           <img src={`${process.env.PUBLIC_URL}/img/logo.svg`} alt="logo" />
@@ -13,7 +12,7 @@ function Banner({ urlName }) {
           <p>정보 입력하기</p>
         </div>
       </div>
-      <Link to="/write"></Link>
+      <Link to="/project04_with/write"></Link>
     </div>
   );
 }

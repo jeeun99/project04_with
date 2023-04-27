@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "./Modal";
 
 function ListCard({ item }) {
-  console.log("listCard", item);
+  // console.log("listCard", item);
   let [on, setOn] = useState(false);
   return (
     <li

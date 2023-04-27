@@ -19,11 +19,11 @@ function Main() {
   let [x, setX] = useState(Number);
   let [y, setY] = useState(Number);
   if (typeof add === "object") {
-    console.log("object");
+    // console.log("object");
     add = add[0];
-    console.log("add obj", add);
+    // console.log("add obj", add);
   } else if (typeof add === "string") {
-    console.log("string이다");
+    // console.log("string이다");
   }
   let data = useSelector((state) => state.data);
   // filter 관련 변수
@@ -32,17 +32,17 @@ function Main() {
   useEffect(() => {
     setTimeout(() => {
       if (add === "") {
-        console.log("add 비어있을때");
+        // console.log("add 비어있을때");
         navigator.geolocation.getCurrentPosition((position) => {
           doSomething(position.coords.latitude, position.coords.longitude);
         });
       } else {
-        console.log("add 비어있을때의 else");
+        // console.log("add 비어있을때의 else");
         let geocoder = new kakao.maps.services.Geocoder();
         geocoder.addressSearch(add, function (result, status) {
-          console.log(" else addSearch 실행되나 + status", status);
+          // console.log(" else addSearch 실행되나 + status", status);
           if (status === kakao.maps.services.Status.OK) {
-            console.log(result[0].y, result[0].x);
+            // console.log(result[0].y, result[0].x);
             doSomething(result[0].y, result[0].x);
           }
         });
@@ -160,7 +160,7 @@ function Main() {
     );
   }, [add, x, y]);
 
-  console.log("filterData", filterData);
+  // console.log("filterData", filterData);
   let datas = [];
   let [btnData, setBtnData] = useState([]);
   useEffect(() => {
@@ -170,10 +170,10 @@ function Main() {
       datas = filterData.slice(1);
       setBtnData([...datas]);
       setListData([...datas]);
-      console.log("datas", datas);
+      // console.log("datas", datas);
     }
   }, [filterData]);
-  console.log("btnData", btnData);
+  // console.log("btnData", btnData);
 
   // 버튼 강제 클릭으로 리스트 바로 출력시키기 ( 대신 검색했을 경우에만 가능하도록 검색 버튼 이용)
   const buttonRef = useRef(null);
@@ -205,7 +205,7 @@ function Main() {
               placeholder="도로명주소를 입력해주세요."
               onChange={(e) => {
                 setInput(e.target.value);
-                console.log("search안 onchange", input);
+                // console.log("search안 onchange", input);
               }}
             />
             <button
