@@ -1,65 +1,72 @@
-import { useNavigate } from "react-router-dom";
-
-function Modal() {
-  let navigate = useNavigate();
+function Modal({ item, on, setOn }) {
   return (
     <div className="modalCon on">
       <div className="modal">
-        <p>건물이름</p>
+        <p>{item.title}</p>
         <button
           className="btnClose"
           onClick={() => {
-            navigate(-1);
+            setOn(!on);
           }}
         >
           닫기
         </button>
         <div className="contents">
-          <div className="toilet">
-            <p>#장애인화장실</p>
-            <div className="imgs">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/toiletImg_01.jpg`}
-                alt="toilet"
-              />
+          {item.elevator === 1 ? (
+            <div className="elevator">
+              <p>#엘리베이터</p>
+              <div className="imgs">
+                <img
+                  src={`${process.env.PUBLIC_URL}${item.elevatorImg}.jpg`}
+                  alt="elevator"
+                />
+              </div>
             </div>
-          </div>
-          <div className="elevator">
-            <p>#엘리베이터</p>
-            <div className="imgs">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/elevatorImg_01.jpg`}
-                alt="elevator"
-              />
+          ) : null}
+          {item.toilet === 1 ? (
+            <div className="toilet">
+              <p>#장애인화장실</p>
+              <div className="imgs">
+                <img
+                  src={`${process.env.PUBLIC_URL}${item.toiletImg}.jpg`}
+                  alt="toilet"
+                />
+              </div>
             </div>
-          </div>
-          <div className="slope">
-            <p>#경사로</p>
-            <div className="imgs">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/slopeImg_01.jpg`}
-                alt="slope"
-              />
+          ) : null}
+          {item.automaticDoor === 1 ? (
+            <div className="autoDoor">
+              <p>#자동문</p>
+              <div className="imgs">
+                <img
+                  src={`${process.env.PUBLIC_URL}${item.automaticDoorImg}.jpg`}
+                  alt="autoDoor"
+                />
+              </div>
             </div>
-          </div>
-          <div className="autoDoor">
-            <p>#자동문</p>
-            <div className="imgs">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/automaticDoorImg_01.jpg`}
-                alt="autoDoor"
-              />
+          ) : null}
+          {item.braille === 1 ? (
+            <div className="braille">
+              <p>#점자</p>
+              <div className="imgs">
+                <img
+                  src={`${process.env.PUBLIC_URL}${item.brailleImg}.jpg`}
+                  alt="braille"
+                />
+              </div>
             </div>
-          </div>
-          <div className="braille">
-            <p>#점자</p>
-            <div className="imgs">
-              <img
-                src={`${process.env.PUBLIC_URL}/img/brailleImg_01.jpg`}
-                alt="braille"
-              />
+          ) : null}
+          {item.slope === 1 ? (
+            <div className="slope">
+              <p>#경사로</p>
+              <div className="imgs">
+                <img
+                  src={`${process.env.PUBLIC_URL}${item.slopeImg}.jpg`}
+                  alt="slope"
+                />
+              </div>
             </div>
-          </div>
+          ) : null}
         </div>
       </div>
     </div>

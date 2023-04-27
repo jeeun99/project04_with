@@ -1,7 +1,16 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import Modal from "./Modal";
+
 function ListCard({ item }) {
+  console.log("listCard", item);
+  let [on, setOn] = useState(false);
   return (
-    <li className="list">
+    <li
+      className="list"
+      onClick={() => {
+        setOn(!on);
+      }}
+    >
       <div className="lImg">
         <img src={`${process.env.PUBLIC_URL}${item.Img}`} alt="bd1" />
       </div>
@@ -20,15 +29,19 @@ function ListCard({ item }) {
         <div className="facility">
           <p>시설</p>
           <div className="things">
-            {item.elevator === 1 ? <p>#엘리베이터</p> : <p hidden></p>}
-            {item.toilet === 1 ? <p>#장애인화장실</p> : <p hidden></p>}
-            {item.automaticDoor === 1 ? <p>#자동문</p> : <p hidden></p>}
-            {item.braille === 1 ? <p>#점자</p> : <p hidden></p>}
-            {item.slope === 1 ? <p>#경사로</p> : <p hidden></p>}
+            {item.elevator === 1 ? <p>#엘리베이터</p> : null}
+            {item.toilet === 1 ? <p>#장애인화장실</p> : null}
+            {item.automaticDoor === 1 ? <p>#자동문</p> : null}
+            {item.braille === 1 ? <p>#점자</p> : null}
+            {item.slope === 1 ? <p>#경사로</p> : null}
           </div>
         </div>
       </div>
-      <Link to={`/project04_with/detail/${item.id}`}></Link>
+      {on === true ? (
+        <Modal item={item} setOn={setOn} on={on} />
+      ) : (
+        <div hidden></div>
+      )}
     </li>
   );
 }

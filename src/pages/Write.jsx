@@ -65,7 +65,7 @@ function Write() {
           <button
             className="btn_submit"
             onClick={() => {
-              navigate("/project04_with/");
+              navigate("/");
             }}
           >
             제출하기

@@ -13,7 +13,7 @@ function Banner({ urlName }) {
           <p>정보 입력하기</p>
         </div>
       </div>
-      <Link to="/project04_with/write"></Link>
+      <Link to="/write"></Link>
     </div>
   );
 }
