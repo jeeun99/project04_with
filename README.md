@@ -4,6 +4,8 @@
 
 데모 링크 : [데모링크](https://jeeun99.github.io/project04_with/)
 
+<img src='https://github.com/jeeun99/project04_with/blob/master/public/gitImg/mockup.jpg?raw=true' alt='demo' >
+
 ## 🙋 프로젝트 소개
 
 리액트의 학습을 위한 웹사이트 제작 프로젝트입니다.
@@ -61,5 +63,7 @@ data는 redux를 활용하여 바인딩했습니다.
 
 Figma 링크: [이제은\_WITH](https://www.figma.com/file/w8a1kSGVFZEJynKE28h9yw/%EC%9D%B4%EC%A0%9C%EC%9D%80_4%EC%B0%A8WITH?type=design&t=xpnmkxKWJKrpX6ob-1)
 
-약식 제안서: 아래 링크 클릭시 프레젠테이션으로 이동됩니다.
-<https://docs.google.com/presentation/d/1JiNj07hzN6ivzxfYDK2Apg6LLu6c_szPmdm4r_lOV0M/edit?usp=sharing>
+약식 제안서: 아래 이미지 클릭시 프레젠테이션으로 이동됩니다.
+<a href='https://docs.google.com/presentation/d/1JiNj07hzN6ivzxfYDK2Apg6LLu6c_szPmdm4r_lOV0M/edit?usp=sharing'>
+<img src='https://github.com/jeeun99/project04_with/blob/master/public/gitImg/pptImg.PNG?raw=true' alt='pptimg'>
+</a>
