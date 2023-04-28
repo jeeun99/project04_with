@@ -275,7 +275,7 @@ function Main() {
             return <ListCard item={item} key={i} />;
           })}
         </ul>
-        {list.length > 2 ? (
+        {list.length > 2 || list.length === btnData.length ? (
           <button
             className="seeMoreBtn"
             onClick={() => {
