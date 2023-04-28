@@ -15,8 +15,8 @@ function App() {
       <Header />
       <Banner urlName={urlName} />
       <Routes>
-        <Route path="/project04_with/" element={<Main urlName={urlName} />} />
-        <Route path="*" element={<Main urlName={urlName} />} />
+        <Route path="/project04_with/" element={<Main />} />
+        <Route path="*" element={<Main />} />
 
         <Route path="/project04_with/write" element={<Write />} />
       </Routes>

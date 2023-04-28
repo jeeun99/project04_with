@@ -163,6 +163,8 @@ function Main() {
   // console.log("filterData", filterData);
   let datas = [];
   let [btnData, setBtnData] = useState([]);
+  let [listData, setListData] = useState([]);
+  let [list, setList] = useState([]);
   useEffect(() => {
     if (!filterData) {
       return;
@@ -170,26 +172,21 @@ function Main() {
       datas = filterData.slice(1);
       setBtnData([...datas]);
       setListData([...datas]);
+      setList([...datas.slice(0, 3)]);
+      setListCount(0);
       // console.log("datas", datas);
     }
   }, [filterData]);
   // console.log("btnData", btnData);
 
-  // 버튼 강제 클릭으로 리스트 바로 출력시키기 ( 대신 검색했을 경우에만 가능하도록 검색 버튼 이용)
-  const buttonRef = useRef(null);
-  const buttonRef2 = useRef(null);
-
-  const handleClick = () => {
-    buttonRef.current.click();
-    buttonRef2.current.click();
-  };
+  let [listCount, setListCount] = useState(3);
 
   useEffect(() => {
-    buttonRef.current.click();
-  }, [add]);
+    console.log("btnData", btnData);
+    setList([...list, ...btnData.slice(listCount, listCount + 3)]);
+  }, [listCount]);
 
-  let [listCount, setListCount] = useState(3);
-  let [listData, setListData] = useState([]);
+  console.log(list);
 
   return (
     <>
@@ -211,9 +208,7 @@ function Main() {
             <button
               onClick={() => {
                 inputFunc();
-                handleClick();
               }}
-              ref={buttonRef2}
             >
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
@@ -225,9 +220,8 @@ function Main() {
         <div className="btns">
           <button
             className="btnMain btn_all"
-            ref={buttonRef}
             onClick={() => {
-              setBtnData(listData);
+              setList(listData);
             }}
           >
             전체보기
@@ -235,16 +229,15 @@ function Main() {
           <button
             className="btnMain btn_wc"
             onClick={() => {
-              setBtnData(listData.filter((a) => a.toilet === 1));
+              setList(listData.filter((a) => a.toilet === 1));
             }}
-            ref={buttonRef2}
           >
             장애인화장실
           </button>
           <button
             className="btnMain btn_s"
             onClick={() => {
-              setBtnData(listData.filter((a) => a.slope === 1));
+              setList(listData.filter((a) => a.slope === 1));
             }}
           >
             경사로
@@ -252,7 +245,7 @@ function Main() {
           <button
             className="btnMain btn_e"
             onClick={() => {
-              setBtnData(listData.filter((a) => a.elevator === 1));
+              setList(listData.filter((a) => a.elevator === 1));
             }}
           >
             엘리베이터
@@ -260,7 +253,7 @@ function Main() {
           <button
             className="btnMain btn_a"
             onClick={() => {
-              setBtnData(listData.filter((a) => a.automaticDoor === 1));
+              setList(listData.filter((a) => a.automaticDoor === 1));
             }}
           >
             자동문
@@ -268,7 +261,7 @@ function Main() {
           <button
             className="btnMain btn_b"
             onClick={() => {
-              setBtnData(listData.filter((a) => a.braille === 1));
+              setList(listData.filter((a) => a.braille === 1));
             }}
           >
             점자
@@ -278,10 +271,22 @@ function Main() {
       </section>
       <section className="forCards mw">
         <ul className="listCon">
-          {btnData.map((item, i) => {
+          {list.map((item, i) => {
             return <ListCard item={item} key={i} />;
           })}
         </ul>
+        {list.length > 2 ? (
+          <button
+            className="seeMoreBtn"
+            onClick={() => {
+              // setBtnData(list);
+              setListCount(listCount + 3);
+              console.log("list, listCount", list, listCount);
+            }}
+          >
+            더보기
+          </button>
+        ) : null}
       </section>
     </>
   );

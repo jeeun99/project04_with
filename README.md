@@ -61,5 +61,5 @@ data는 redux를 활용하여 바인딩했습니다.
 
 Figma 링크: [이제은\_WITH](https://www.figma.com/file/w8a1kSGVFZEJynKE28h9yw/%EC%9D%B4%EC%A0%9C%EC%9D%80_4%EC%B0%A8WITH?type=design&t=xpnmkxKWJKrpX6ob-1)
 
-약식 기획서: 아래 링크 클릭시 프레젠테이션으로 이동됩니다.
+약식 제안서: 아래 링크 클릭시 프레젠테이션으로 이동됩니다.
 <https://docs.google.com/presentation/d/1JiNj07hzN6ivzxfYDK2Apg6LLu6c_szPmdm4r_lOV0M/edit?usp=sharing>

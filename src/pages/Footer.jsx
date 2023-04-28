@@ -8,9 +8,11 @@ function Footer() {
           <Link to="/">
             <img src={`${process.env.PUBLIC_URL}/img/logo.svg`} alt="logo" />
           </Link>
-          <Link to="/">서비스</Link>
-          <Link to="/">문의</Link>
-          <Link to="/">고객센터</Link>
+          <div>
+            <Link to="/">서비스</Link>
+            <Link to="/">문의</Link>
+            <Link to="/">고객센터</Link>
+          </div>
         </div>
 
         <div className="social">
