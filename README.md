@@ -46,7 +46,8 @@
 ### 💬 고민사항 및 해결과정
 
 문제 해결 과정 : <a href='https://jeeun.notion.site/aa3f685b4815413eb02c00e579937b8f' target="_blank">노션 링크 test</a>
-[새 탭에서 열기]([https://www.google.com/](https://jeeun.notion.site/aa3f685b4815413eb02c00e579937b8f)){:target="_blank"}
+
+[새 탭에서 열기](https://jeeun.notion.site/aa3f685b4815413eb02c00e579937b8f){:target="_blank"}
 
 - 현재위치 불러오기
 - 리스트가 바로 출력되지 않음
