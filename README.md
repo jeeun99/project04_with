@@ -2,7 +2,7 @@
 
 리액트 웹을 활용한 장애인 편의시설 정보 제공 웹사이트
 
-데모 링크 : [데모링크](https://jeeun99.github.io/project04_with/)
+데모 링크 : [데모링크]{:target="_blank"}(https://jeeun99.github.io/project04_with/)
 
 <img src='https://github.com/jeeun99/project04_with/blob/master/public/gitImg/mockup.jpg?raw=true' alt='demo' >
 
