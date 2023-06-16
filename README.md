@@ -2,7 +2,7 @@
 
 리액트 웹을 활용한 장애인 편의시설 정보 제공 웹사이트
 
-데모 링크 : [데모링크](https://jeeun99.github.io/project04_with/)
+데모 링크 : <a href='https://jeeun99.github.io/project04_with/' target="_blank">데모 사이트</a>
 
 <img src='https://github.com/jeeun99/project04_with/blob/master/public/gitImg/mockup.jpg?raw=true' alt='demo' >
 
@@ -45,7 +45,7 @@
 
 ### 💬 고민사항 및 해결과정
 
-문제 해결 과정 : [노션\_링크](https://jeeun.notion.site/aa3f685b4815413eb02c00e579937b8f)
+문제 해결 과정 : <a href='https://jeeun.notion.site/aa3f685b4815413eb02c00e579937b8f' target="_blank">노션 링크</a>
 
 - 현재위치 불러오기
 - 리스트가 바로 출력되지 않음
@@ -55,13 +55,14 @@
 
 ### 🔗 링크 모음
 
-데모 링크 : <https://jeeun99.github.io/project04_with/>
+데모 링크 : <a href='https://jeeun99.github.io/project04_with/' target="_blank">데모 사이트</a>
 
 아이디어 회의 링크: [피그마\_링크](https://www.figma.com/file/lM2WAmN1Croj1Mgg4UJThD/%EB%A6%AC%EC%95%A1%ED%8A%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?type=design&node-id=0%3A1&t=3VcM0yk0C8ekw9ls-1)
 
-Figma 링크: [이제은\_WITH](https://www.figma.com/file/w8a1kSGVFZEJynKE28h9yw/%EC%9D%B4%EC%A0%9C%EC%9D%80_4%EC%B0%A8WITH?type=design&t=xpnmkxKWJKrpX6ob-1)
+디자인 시안 Figma 링크: <a href='https://www.figma.com/file/w8a1kSGVFZEJynKE28h9yw/%EC%9D%B4%EC%A0%9C%EC%9D%80_4%EC%B0%A8WITH?type=design&t=xpnmkxKWJKrpX6ob-1' target="_blank">이제은_WITH 프로젝트</a>
+
 
 약식 제안서: 아래 이미지 클릭시 프레젠테이션으로 이동됩니다.
-<a href='https://docs.google.com/presentation/d/1JiNj07hzN6ivzxfYDK2Apg6LLu6c_szPmdm4r_lOV0M/edit?usp=sharing'>
+<a href='https://docs.google.com/presentation/d/1JiNj07hzN6ivzxfYDK2Apg6LLu6c_szPmdm4r_lOV0M/edit?usp=sharing' target="_blank">
 <img src='https://github.com/jeeun99/project04_with/blob/master/public/gitImg/pptImg.PNG?raw=true' alt='pptimg'>
 </a>
